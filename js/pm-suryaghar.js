@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const income = (data.get('Monthly Income') || '').toString().trim();
       const ownsHouse = (data.get('Owns House') || '').toString().trim();
       const billInName = (data.get('Electricity Bill In Name') || '').toString().trim();
+      const planToPurchase = (data.get('Plan To Purchase') || '').toString().trim();
 
       const lines = [
         'New PM Surya Ghar Lead - TSS Website',
@@ -105,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `Occupation: ${occupation}`,
         `Monthly Income: ${income}`,
         `Owns House: ${ownsHouse}`,
-        `Electricity Bill In Name: ${billInName}`
+        `Electricity Bill In Name: ${billInName}`,
+        `Plan To Purchase: ${planToPurchase}`
       ];
 
       const waText = encodeURIComponent(lines.join('\n'));
@@ -130,7 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
             occupation: occupation,
             monthly_income: income,
             owns_house: ownsHouse === 'Yes',
-            electricity_bill_in_name: billInName === 'Yes'
+            electricity_bill_in_name: billInName === 'Yes',
+            plan_to_purchase: planToPurchase
           })
         }).catch(err => console.error('Supabase lead insert failed:', err));
       } catch (err) { console.error('Supabase lead insert failed:', err); }
