@@ -1,4 +1,12 @@
 // ===================== PM Surya Ghar explainer + lead form =====================
+
+// Supabase project used to store PM Surya Ghar leads. This uses the public
+// "anon" key, which is safe to expose in client-side code: the leads table
+// has Row Level Security enabled with an INSERT-only policy for anon, so
+// this key can add new leads but cannot read, edit, or delete existing ones.
+const SUPABASE_URL = 'https://fwjswlyzxzmhoauvdiyl.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_B318rr033zAxOQ5KQkX9Dw_DbWm5L8e';
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Phase-cycling animation ---- */
@@ -103,9 +111,32 @@ document.addEventListener('DOMContentLoaded', () => {
       const waText = encodeURIComponent(lines.join('\n'));
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
 
+      // Primary data store: insert the lead straight into Supabase so it can
+      // be pulled via API. Fire-and-forget — we don't block the WhatsApp
+      // handoff on this, but we do log failures to the console for debugging.
+      try {
+        fetch(`${SUPABASE_URL}/rest/v1/pm_suryaghar_leads`, {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({
+            name: name,
+            phone: phone,
+            district: district,
+            occupation: occupation,
+            monthly_income: income,
+            owns_house: ownsHouse === 'Yes',
+            electricity_bill_in_name: billInName === 'Yes'
+          })
+        }).catch(err => console.error('Supabase lead insert failed:', err));
+      } catch (err) { console.error('Supabase lead insert failed:', err); }
+
       // Best-effort background copy to email too (same pattern as the main
-      // enquiry form). This will later be replaced/supplemented by a direct
-      // Supabase insert once that's wired up.
+      // enquiry form) — an extra backup alongside the Supabase row.
       try {
         fetch(leadForm.action, { method: 'POST', body: data, mode: 'no-cors' });
       } catch (err) { /* ignore - WhatsApp is the primary channel */ }
