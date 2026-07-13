@@ -110,12 +110,12 @@
 .radio-option{
   display:flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px;
   border:1.5px solid var(--border-light); background:var(--card-bg); cursor:pointer;
-  font-size:.9rem; font-weight:500; color:var(--text-dark);
-  transition:border-color .25s ease, background-color .25s ease;
+  font-size:.9rem; font-weight:600; color:var(--text-dark);
+  transition:border-color .25s ease, background-color .25s ease, color .25s ease;
 }
 .radio-option input{ accent-color:var(--orange); width:16px; height:16px; cursor:pointer; flex-shrink:0; }
 .radio-option:hover{ border-color:var(--orange); }
-.radio-option:has(input:checked){ border-color:var(--orange); background:rgba(255,157,35,.1); font-weight:700; color:var(--accent-strong); }
+.radio-option:has(input:checked){ border-color:var(--orange); background:rgba(255,157,35,.1); color:var(--accent-strong); }
 
 /* ---------- Responsive ---------- */
 @media (max-width:860px){
