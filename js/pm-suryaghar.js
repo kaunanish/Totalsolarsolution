@@ -82,21 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = new FormData(leadForm);
       const name = (data.get('Name') || '').toString().trim();
       const phone = (data.get('Phone') || '').toString().trim();
-      const branch = (data.get('Branch') || '').toString().trim();
-      const bill = (data.get('Monthly Bill') || '').toString().trim();
-      const roof = (data.get('Roof Type') || '').toString().trim();
-      const message = (data.get('Message') || '').toString().trim();
+      const district = (data.get('District') || '').toString().trim();
+      const occupation = (data.get('Occupation') || '').toString().trim();
+      const income = (data.get('Monthly Income') || '').toString().trim();
+      const ownsHouse = (data.get('Owns House') || '').toString().trim();
+      const billInName = (data.get('Electricity Bill In Name') || '').toString().trim();
 
       const lines = [
         'New PM Surya Ghar Lead - TSS Website',
         '',
         `Name: ${name}`,
         `Phone: ${phone}`,
-        `Branch: ${branch}`,
-        `Monthly Bill: ${bill}`,
-        `Roof Type: ${roof}`
+        `Sub-division: ${district}`,
+        `Occupation: ${occupation}`,
+        `Monthly Income: ${income}`,
+        `Owns House: ${ownsHouse}`,
+        `Electricity Bill In Name: ${billInName}`
       ];
-      if (message) lines.push(`Message: ${message}`);
 
       const waText = encodeURIComponent(lines.join('\n'));
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;

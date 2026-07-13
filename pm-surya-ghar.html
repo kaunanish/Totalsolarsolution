@@ -260,39 +260,66 @@
         <input type="tel" name="Phone" required placeholder="10-digit mobile number">
       </div>
       <div class="form-row">
-        <label>Nearest Branch</label>
-        <select name="Branch">
-          <option>Kantabanji</option>
-          <option>Balangir</option>
-          <option>Bhawanipatna</option>
-          <option>Titlagarh</option>
-          <option>Angul</option>
-          <option>Badmal (Head Office)</option>
-          <option>Not Sure</option>
+        <label>District &amp; Sub-division</label>
+        <select name="District" required>
+          <option value="" disabled selected>Select your sub-division</option>
+          <optgroup label="Balangir District">
+            <option>Balangir</option>
+            <option>Titilagarh</option>
+            <option>Patnagarh</option>
+          </optgroup>
+          <optgroup label="Bargarh District">
+            <option>Bargarh</option>
+            <option>Padampur</option>
+          </optgroup>
+          <optgroup label="Kalahandi District">
+            <option>Bhawanipatna</option>
+            <option>Dharamgarh</option>
+          </optgroup>
+          <optgroup label="Sonepur District">
+            <option>Sonepur</option>
+            <option>Birmaharajpur</option>
+          </optgroup>
+          <optgroup label="Nuapada District">
+            <option>Nuapada</option>
+          </optgroup>
         </select>
       </div>
       <div class="form-row">
-        <label>Average Monthly Electricity Bill</label>
-        <select name="Monthly Bill">
-          <option>Under ₹1,000</option>
-          <option>₹1,000 - ₹3,000</option>
-          <option>₹3,000 - ₹6,000</option>
-          <option>Above ₹6,000</option>
+        <label>Occupation</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="Occupation" value="Salaried Employee" required><span>Salaried Employee</span></label>
+          <label class="radio-option"><input type="radio" name="Occupation" value="Business Owner"><span>Business Owner</span></label>
+          <label class="radio-option"><input type="radio" name="Occupation" value="Self-Employed / Professional"><span>Self-Employed / Professional</span></label>
+          <label class="radio-option"><input type="radio" name="Occupation" value="Farmer"><span>Farmer</span></label>
+          <label class="radio-option"><input type="radio" name="Occupation" value="Other"><span>Other</span></label>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Monthly Household Income</label>
+        <select name="Monthly Income" required>
+          <option value="" disabled selected>Select a range</option>
+          <option>Up to ₹25,000</option>
+          <option>₹25,001 - ₹50,000</option>
+          <option>₹50,001 - ₹75,000</option>
+          <option>Above ₹75,000</option>
         </select>
       </div>
       <div class="form-row">
-        <label>Roof Type</label>
-        <select name="Roof Type">
-          <option>RCC / Concrete</option>
-          <option>Tin / Metal Sheet</option>
-          <option>Other</option>
-        </select>
+        <label>Do you own the house at this address?</label>
+        <div class="radio-group radio-group-inline">
+          <label class="radio-option"><input type="radio" name="Owns House" value="Yes" required><span>Yes</span></label>
+          <label class="radio-option"><input type="radio" name="Owns House" value="No"><span>No</span></label>
+        </div>
       </div>
       <div class="form-row">
-        <label>Message (optional)</label>
-        <textarea name="Message" rows="3" placeholder="Anything else we should know?"></textarea>
+        <label>Is the electricity connection in your name?</label>
+        <div class="radio-group radio-group-inline">
+          <label class="radio-option"><input type="radio" name="Electricity Bill In Name" value="Yes" required><span>Yes</span></label>
+          <label class="radio-option"><input type="radio" name="Electricity Bill In Name" value="No"><span>No</span></label>
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Request Free Site Visit via WhatsApp</button>
+      <button type="submit" class="btn btn-primary btn-block">Check Eligibility &amp; Request Site Visit</button>
       <p class="form-status" id="leadFormStatus"></p>
     </form>
   </div>
