@@ -52,7 +52,7 @@ Static-host friendly — works as-is on Netlify, GitHub Pages, Vercel, or any ba
 - **Logo** (`images/logo.svg`) is a placeholder — swap in the real TSS logo.
 - **Facebook link** in the footer currently points to `#` — update once the page exists.
 - **Angul branch address** is missing a PIN code.
-- **Lead form backend**: currently WhatsApp + Formsubmit email. Planned upgrade to insert directly into a Supabase table.
+- **Lead form backend**: main enquiry form uses WhatsApp + Formsubmit email. The PM Surya Ghar lead form additionally inserts each submission directly into a Supabase table (`pm_suryaghar_leads`), which the business owner can pull via the Supabase REST API.
 - **PM Surya Ghar "Learn More" flow**: now a full dedicated page (`pm-surya-ghar.html`) rather than a placeholder link.
 
 ## Contact
