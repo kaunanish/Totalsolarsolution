@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Solar Solution (TSS) | Solar Panels, Inverters & Pumps in Odisha</title>
+<meta name="description" content="Total Solar Solution (TSS) - Trusted solar installation company with branches across Kantabanji, Balangir, Bhawanipatna, Titlagarh, Angul & Badmal. Solar panels, inverters, pumps & PM Surya Ghar Yojana assistance.">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NOTE FOR ANISH: Still open before going live =====
+  1. Phone / WhatsApp number is set to +91 78559 39461 across the page. If WhatsApp uses a different number, update "917855939461" in index.html and js/script.js.
+  2. Angul branch has no PIN code yet - search "Athmallik, Angul, Odisha" in the footer and add it once you have it.
+  3. Facebook page URL - the footer icon currently links to "#", search "target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\"".
+  4. Logo (images/logo.svg is still a placeholder) - swap in your real logo file.
+  5. PM Surya Ghar "Learn More" button href="#" - link to your chosen page/portal.
+  6. Enquiry form posts to Formsubmit using tssbalangir@gmail.com as a backup channel - confirm the activation email Formsubmit sends on first submission.
+======================================================================= -->
+
+<!-- Preloader -->
+<div id="preloader"><div class="sun-loader"></div></div>
+
+<!-- Floating action buttons -->
+<div class="fab-stack">
+  <a href="https://wa.me/917855939461" class="fab fab-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26"><path fill="#fff" d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8c1.8 1 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.6 1.1 1.1-4.5-.3-.4C5.3 17.7 4.7 16 4.7 15 4.7 8.8 9.8 3.7 16 3.7S27.3 8.8 27.3 15 22.2 24.8 16 24.8zm6-8.3c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.5-.6-.7-.6h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+  </a>
+  <a href="tel:+917855939461" class="fab fab-call" aria-label="Call us">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path fill="#fff" d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <img src="images/logo.svg" alt="Total Solar Solution logo" class="brand-logo">
+      <span class="brand-text">Total Solar<br><small>Solution</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#suryaghar" class="nav-link">PM Surya Ghar</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#enquiry" class="nav-link">Enquiry</a>
+      <a href="#footer" class="nav-link">Contact</a>
+      <a href="#enquiry" class="nav-cta">Get Free Quote</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.7 14.9a8.5 8.5 0 0 1-10.6-11 .6.6 0 0 0-.8-.8 9.5 9.5 0 1 0 12.2 12.2.6.6 0 0 0-.8-.4z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="4.2" x2="5.9" y2="5.9"/><line x1="18.1" y1="18.1" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="5.9" y2="18.1"/><line x1="18.1" y1="5.9" x2="19.8" y2="4.2"/></g></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg-glow"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy" data-reveal>
+      <span class="badge-pill">☀️ Powering Western Odisha Since 2018</span>
+      <h1>Bringing <span class="text-accent">Clean Solar Power</span> to Every Home &amp; Farm</h1>
+      <p class="hero-sub">
+        Total Solar Solution (TSS) is a trusted name in solar panels, inverters &amp; solar pumps —
+        with <strong>6 branches across Kantabanji, Balangir, Bhawanipatna, Titlagarh, Angul &amp; Badmal.</strong>
+        Wherever you are, TSS is near you.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#enquiry" class="btn btn-primary">Get a Free Quote</a>
+        <a href="#gallery" class="btn btn-ghost">See Our Work</a>
+      </div>
+      <div class="city-chip-row">
+        <span class="city-chip">📍 Kantabanji</span>
+        <span class="city-chip">📍 Balangir</span>
+        <span class="city-chip">📍 Bhawanipatna</span>
+        <span class="city-chip">📍 Titlagarh</span>
+        <span class="city-chip">📍 Angul</span>
+        <span class="city-chip city-chip-main">📍 Badmal (HO)</span>
+      </div>
+    </div>
+    <div class="hero-visual" data-reveal>
+      <img src="images/hero-canopy.png" alt="Large-scale solar canopy installation" class="hero-img float-slow">
+      <img src="images/inverter-photo.png" alt="Solar inverter monitoring display" class="hero-float hero-float-1 float-fast">
+      <img src="images/pump-photo.png" alt="Solar water pump in a farm field" class="hero-float hero-float-2 float-med">
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span></div>
+</section>
+
+<!-- ===== SLIDESHOW / GALLERY ===== -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <p class="eyebrow" data-reveal>What We Do</p>
+    <h2 data-reveal>Installations, Inverters, Pumps &amp; More</h2>
+    <p class="section-sub" data-reveal>A quick look at the kind of solar work TSS delivers across all 6 branches.</p>
+  </div>
+  <div class="slideshow" data-reveal>
+    <div class="slides-track" id="slidesTrack">
+      <div class="slide active">
+        <img src="images/rooftop-install.png" alt="TSS technician connecting a rooftop solar installation in India">
+        <div class="slide-caption"><h3>Rooftop Solar Installation</h3><p>Custom-designed rooftop solar systems for homes &amp; shops.</p></div>
+      </div>
+      <div class="slide">
+        <img src="images/inverter-photo.png" alt="Solar inverter monitoring display showing live generation data">
+        <div class="slide-caption"><h3>Solar Inverters</h3><p>Reliable on-grid &amp; off-grid inverters with warranty support.</p></div>
+      </div>
+      <div class="slide">
+        <img src="images/pump-photo.png" alt="Solar water pump irrigating a farm field">
+        <div class="slide-caption"><h3>Solar Water Pumps</h3><p>Diesel-free irrigation pumps for farmers in the region.</p></div>
+      </div>
+      <div class="slide">
+        <img src="images/suryaghar-family.png" alt="Family with a PM Surya Ghar Yojana rooftop solar installation">
+        <div class="slide-caption"><h3>PM Surya Ghar Yojana</h3><p>End-to-end help getting your subsidy &amp; free rooftop solar.</p></div>
+      </div>
+      <div class="slide">
+        <img src="images/microgrid-pump.png" alt="Community microgrid and irrigation project supported by PM Surya Ghar Yojana">
+        <div class="slide-caption"><h3>Rural Microgrid Projects</h3><p>Community-scale solar powering irrigation &amp; village needs.</p></div>
+      </div>
+      <div class="slide">
+        <img src="images/battery-farm.png" alt="Solar farm battery and monitoring station">
+        <div class="slide-caption"><h3>Battery &amp; Monitoring Systems</h3><p>Large-scale battery and inverter stations for reliable backup power.</p></div>
+      </div>
+      <div class="slide">
+        <img src="images/hero-canopy.png" alt="Large-scale solar canopy installation">
+        <div class="slide-caption"><h3>Large-Scale Solar Installations</h3><p>From rooftops to canopies — solar infrastructure at any scale.</p></div>
+      </div>
+    </div>
+    <button class="slide-arrow slide-prev" id="slidePrev" aria-label="Previous slide">&#10094;</button>
+    <button class="slide-arrow slide-next" id="slideNext" aria-label="Next slide">&#10095;</button>
+    <div class="slide-dots" id="slideDots"></div>
+  </div>
+</section>
+
+<!-- ===== PM SURYA GHAR YOJANA ===== -->
+<section class="suryaghar-section" id="suryaghar">
+  <div class="container suryaghar-inner">
+    <div class="suryaghar-visual" data-reveal>
+      <img src="images/suryaghar-family.png" alt="Family with a PM Surya Ghar Yojana rooftop solar installation" class="float-slow">
+    </div>
+    <div class="suryaghar-copy" data-reveal>
+      <p class="eyebrow eyebrow-light">Government Scheme</p>
+      <h2>PM Surya Ghar: Muft Bijli Yojana</h2>
+      <p class="section-sub-light">
+        TSS helps you apply for and install solar under the Government of India's flagship rooftop
+        solar scheme — so you save more and pay less, right from day one.
+      </p>
+      <ul class="scheme-points">
+        <li><strong>Up to ₹78,000</strong> central subsidy — ₹30,000/kW for the first 2kW and ₹18,000 for the 3rd kW.</li>
+        <li><strong>Up to 300 units</strong> of free electricity every month for eligible households.</li>
+        <li>Subsidy is <strong>credited directly</strong> to your bank account within 30 days of commissioning.</li>
+        <li>Available for residential connections with sanctioned load up to <strong>10 kW</strong>.</li>
+        <li>Applied through the official national portal, coordinated by MNRE via your local DISCOM.</li>
+      </ul>
+      <a href="pm-surya-ghar.html" class="btn btn-primary" id="learnMoreBtn">Learn More</a>
+      <p class="scheme-disclaimer">Scheme details sourced from pmsuryaghar.gov.in — TSS assists with application &amp; installation only; final approval rests with the Government/DISCOM.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / COMPANY PROFILE ===== -->
+<section class="about-section" id="about">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Who We Are</p>
+    <h2 data-reveal>Company Profile</h2>
+    <p class="section-sub" data-reveal>Total Solar Solution (TSS) has been lighting up homes and farms across Western Odisha with dependable solar technology.</p>
+
+    <div class="about-grid">
+      <div class="stats-grid" data-reveal>
+        <div class="stat-card">
+          <span class="stat-num" data-count="2018" data-suffix="">2018</span>
+          <span class="stat-label">Established Since</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-count="20" data-suffix="+">0</span>
+          <span class="stat-label">Team Members</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-count="20000" data-suffix="+">0</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-count="6" data-suffix="+">0</span>
+          <span class="stat-label">Cities Served</span>
+        </div>
+      </div>
+
+      <div class="ceo-card" data-reveal>
+        <div class="ceo-photo-wrap">
+          <img src="images/ceo.jpg" alt="Debishree Mishra, Founder &amp; CEO of Total Solar Solution" class="ceo-photo">
+        </div>
+        <div class="ceo-info">
+          <h3>Founder &amp; CEO</h3>
+          <p class="ceo-name">Debishree Mishra</p>
+          <p>Leading Total Solar Solution since inception in 2018, she has guided TSS from a single shop
+          to a 6-city solar service network — driven by a simple mission: reliable clean energy for every home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ENQUIRY / CONTACT FORM ===== -->
+<section class="enquiry-section" id="enquiry">
+  <div class="container enquiry-inner">
+    <div class="enquiry-copy" data-reveal>
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Ask For a Free Solar Consultation</h2>
+      <p class="section-sub">Fill the form and our team from your nearest branch will get back to you shortly.</p>
+      <div class="quick-contact">
+        <a href="tel:+917855939461" class="quick-contact-item">📞 +91 78559 39461</a>
+        <a href="mailto:tssbalangir@gmail.com" class="quick-contact-item">✉️ tssbalangir@gmail.com</a>
+      </div>
+    </div>
+    <form class="enquiry-form" data-reveal id="enquiryForm" action="https://formsubmit.co/tssbalangir@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Enquiry - TSS Website">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="form-row">
+        <label>Full Name</label>
+        <input type="text" name="Name" required placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label>Phone Number</label>
+        <input type="tel" name="Phone" required placeholder="10-digit mobile number">
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="you@example.com">
+      </div>
+      <div class="form-row">
+        <label>Nearest Branch</label>
+        <select name="Branch">
+          <option>Kantabanji</option>
+          <option>Balangir</option>
+          <option>Bhawanipatna</option>
+          <option>Titlagarh</option>
+          <option>Angul</option>
+          <option>Badmal (Head Office)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea name="Message" rows="4" placeholder="Tell us what you need — rooftop panels, inverter, pump, PM Surya Ghar help, etc."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Enquiry via WhatsApp</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.svg" alt="TSS logo" class="footer-logo">
+      <h3>Total Solar Solution</h3>
+      <p>Solar Panels &middot; Inverters &middot; Solar Pumps &middot; PM Surya Ghar Assistance</p>
+      <div class="footer-social">
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.4 3.65 15.4 3.55 14.25 3.55c-2.4 0-4.05 1.45-4.05 4.1V9.9H7.5V13h2.7v8h3.3z"/></svg>
+        </a>
+        <a href="https://wa.me/917855939461" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#fff" d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8c1.8 1 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm6 18.5c-.3.7-1.6 1.4-2.1 1.5-.6.1-1.3.1-1.9-.1-.4-.2-1-.4-1.7-.6-3.1-1.2-5.1-4.3-5.2-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.6.3.6 1 2.2 1 2.4 0 .2.1.4 0 .6-.1.2-.1.3-.3.5-.2.1-.4.4-.5.5-.1.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.4 1.4 2.7 1.6.3.1.5.1.7-.1.2-.2.8-1 1-1.3.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.1.5.2.6.3.1.2.1.9-.2 1.6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-addresses">
+      <h4>Our Branches</h4>
+      <ul class="address-list">
+        <li><strong>Kantabanji</strong><br>Railway Station Road, Kantabanji, Odisha - 767039</li>
+        <li><strong>Balangir</strong><br>RTO Chowk, Balangir, Odisha - 767001</li>
+        <li><strong>Bhawanipatna</strong><br>Naktichiguda, Opposite DIET, Bhawanipatna, Kalahandi, Odisha - 766001</li>
+        <li><strong>Titlagarh</strong><br>Sargiguda, Near Vaishnodevi Mandir, Titlagarh, Odisha - 767033</li>
+        <li><strong>Angul</strong><br>Madhapur, Athmallik, Angul, Odisha</li>
+      </ul>
+    </div>
+
+    <div class="footer-hq">
+      <h4>Corporate Office</h4>
+      <div class="hq-card">
+        <strong>Badmal</strong>
+        <p>VIP Chowk, Phapsi, Badmal<br>Balangir, Odisha - 767070</p>
+        <a href="mailto:tssbalangir@gmail.com">tssbalangir@gmail.com</a>
+        <a href="tel:+917855939461">+91 78559 39461</a>
+      </div>
+      <div class="footer-btn-row">
+        <a href="https://wa.me/917855939461" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="tel:+917855939461" class="btn btn-call">Call Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Total Solar Solution (TSS). All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

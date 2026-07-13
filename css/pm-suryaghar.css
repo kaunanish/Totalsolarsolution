@@ -1,0 +1,118 @@
+/* ===================== PM Surya Ghar animated explainer ===================== */
+
+/* ---------- Page hero ---------- */
+.scheme-hero{
+  position:relative; padding:150px 0 70px; text-align:center;
+  background:linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 55%, #061c47 100%);
+  overflow:hidden;
+}
+.scheme-hero .container{ position:relative; z-index:2; max-width:760px; }
+.scheme-hero h1{ color:#fff; font-size:2.4rem; font-weight:800; margin-bottom:16px; }
+.scheme-hero .section-sub-light{ margin:0 auto 24px; }
+.scheme-hero .btn{ margin-top:10px; }
+
+/* ---------- Animation wrap ---------- */
+.scheme-animation-section{ text-align:center; }
+.scheme-animation-section .container{ margin-bottom:30px; }
+.scheme-animation-section .section-sub{ margin:0 auto; }
+
+.scheme-anim-wrap{
+  position:relative; max-width:900px; margin:0 auto; padding:0 20px;
+  display:flex; flex-direction:column; align-items:center;
+}
+.scheme-anim{
+  width:100%; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-soft);
+  background:#EAF6FF;
+}
+.scheme-svg{ width:100%; height:auto; display:block; }
+
+/* ---------- SVG element base states ---------- */
+.sky-night, .ground-night, .stars, .moon-group{ opacity:0; transition:opacity .7s ease; }
+.sky-day, .ground-day, .sun-group{ opacity:1; transition:opacity .7s ease; }
+.stars circle{ fill:#fff; }
+
+.sun-group, .moon-group{ transition:opacity .7s ease; }
+
+.solar-unit{ transition:filter .6s ease, opacity .6s ease; }
+.solar-unit rect:first-child{ transition:fill .6s ease; }
+
+.wire-line{ fill:none; stroke:#B9CBE6; stroke-width:4; stroke-linecap:round; }
+.node-label{ font-family:'Inter',sans-serif; font-size:13px; font-weight:700; fill:#5B6B84; letter-spacing:.5px; }
+
+.dots{ opacity:0; transition:opacity .5s ease; }
+.dots .dot{ fill:var(--yellow); filter:drop-shadow(0 0 4px rgba(255,201,60,.8)); }
+.dots-grid-export .dot{ fill:var(--green); filter:drop-shadow(0 0 4px rgba(47,174,96,.8)); }
+
+.meter-needle{ transform-origin:338px 393px; transition:transform .6s ease; }
+.meter-badge{ font-family:'Inter',sans-serif; font-size:13px; font-weight:700; opacity:0; transition:opacity .5s ease; }
+.meter-badge-export{ fill:var(--green); }
+.meter-badge-import{ fill:var(--orange-dark); }
+
+.load-bulb{ transition:opacity .5s ease, filter .5s ease; }
+
+/* ---------- Phase 1: Solar only ---------- */
+.scheme-anim[data-phase="1"] .dots-solar-inverter,
+.scheme-anim[data-phase="1"] .dots-inverter-house{ opacity:1; }
+.scheme-anim[data-phase="1"] .solar-unit{ filter:drop-shadow(0 0 10px rgba(255,201,60,.7)); }
+.scheme-anim[data-phase="1"] .meter-needle{ transform:rotate(0deg); }
+
+/* ---------- Phase 2: Export surplus ---------- */
+.scheme-anim[data-phase="2"] .dots-solar-inverter,
+.scheme-anim[data-phase="2"] .dots-inverter-house,
+.scheme-anim[data-phase="2"] .dots-grid-export{ opacity:1; }
+.scheme-anim[data-phase="2"] .solar-unit{ filter:drop-shadow(0 0 14px rgba(255,201,60,.9)); }
+.scheme-anim[data-phase="2"] .meter-needle{ transform:rotate(-35deg); }
+.scheme-anim[data-phase="2"] .meter-badge-export{ opacity:1; }
+
+/* ---------- Phase 3: Grid assist ---------- */
+.scheme-anim[data-phase="3"] .dots-solar-inverter,
+.scheme-anim[data-phase="3"] .dots-inverter-house,
+.scheme-anim[data-phase="3"] .dots-grid-import{ opacity:1; }
+.scheme-anim[data-phase="3"] .solar-unit{ filter:drop-shadow(0 0 8px rgba(255,201,60,.55)); }
+.scheme-anim[data-phase="3"] .meter-needle{ transform:rotate(35deg); }
+.scheme-anim[data-phase="3"] .meter-badge-import{ opacity:1; }
+
+/* ---------- Phase 4: Night, grid only ---------- */
+.scheme-anim[data-phase="4"] .sky-day,
+.scheme-anim[data-phase="4"] .ground-day,
+.scheme-anim[data-phase="4"] .sun-group{ opacity:0; }
+.scheme-anim[data-phase="4"] .sky-night,
+.scheme-anim[data-phase="4"] .ground-night,
+.scheme-anim[data-phase="4"] .stars,
+.scheme-anim[data-phase="4"] .moon-group{ opacity:1; }
+.scheme-anim[data-phase="4"] .dots-grid-import{ opacity:1; }
+.scheme-anim[data-phase="4"] .solar-unit{ filter:none; opacity:.45; }
+.scheme-anim[data-phase="4"] .meter-needle{ transform:rotate(35deg); }
+.scheme-anim[data-phase="4"] .meter-badge-import{ opacity:1; }
+.scheme-anim[data-phase="4"] .node-label{ fill:#9FB1CF; }
+
+/* ---------- Caption card ---------- */
+.scheme-caption{
+  margin-top:26px; max-width:600px; text-align:center;
+}
+.scheme-phase-tag{
+  display:inline-block; background:rgba(255,157,35,.12); color:var(--orange-dark);
+  padding:6px 16px; border-radius:50px; font-size:.8rem; font-weight:700; margin-bottom:12px;
+  letter-spacing:.5px;
+}
+.scheme-caption h3{ font-size:1.4rem; margin-bottom:8px; }
+.scheme-caption p{ margin:0; }
+
+.scheme-prev, .scheme-next{ top:38%; }
+.scheme-anim-wrap .slide-dots{ margin-top:20px; }
+
+/* ---------- Lead section spacing ---------- */
+.lead-section{ background:var(--section-alt-bg); }
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .scheme-hero{ padding:130px 0 60px; }
+  .scheme-hero h1{ font-size:1.9rem; }
+  .scheme-prev, .scheme-next{ display:none; }
+}
+
+@media (max-width:600px){
+  .scheme-hero h1{ font-size:1.6rem; }
+  .scheme-caption h3{ font-size:1.2rem; }
+  .node-label{ font-size:16px; }
+}

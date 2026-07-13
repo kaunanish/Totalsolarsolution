@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12245A"/>
+      <stop offset="100%" stop-color="#2E4A9C"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#nightSky)"/>
+  <circle cx="500" cy="70" r="26" fill="#FFF6D8"/>
+  <g fill="#FFFFFF" opacity="0.8">
+    <circle cx="120" cy="60" r="2"/><circle cx="180" cy="100" r="2"/><circle cx="260" cy="50" r="2"/>
+    <circle cx="340" cy="90" r="2"/><circle cx="420" cy="40" r="2"/><circle cx="90" cy="130" r="2"/>
+  </g>
+  <rect x="0" y="380" width="600" height="40" fill="#1C2B4A"/>
+  <!-- pole -->
+  <rect x="292" y="140" width="14" height="240" fill="#555"/>
+  <!-- panel on top -->
+  <g transform="translate(230,90) rotate(-10)">
+    <rect x="0" y="0" width="120" height="40" rx="4" fill="#123B7A" stroke="#0B2454" stroke-width="2"/>
+    <line x1="30" y1="0" x2="30" y2="40" stroke="#3E6FC4" stroke-width="2"/>
+    <line x1="60" y1="0" x2="60" y2="40" stroke="#3E6FC4" stroke-width="2"/>
+    <line x1="90" y1="0" x2="90" y2="40" stroke="#3E6FC4" stroke-width="2"/>
+  </g>
+  <!-- lamp head -->
+  <path d="M260 140 L340 140 L320 170 L280 170 Z" fill="#333"/>
+  <ellipse cx="300" cy="172" rx="26" ry="8" fill="#FFE08A"/>
+  <!-- light glow -->
+  <ellipse cx="300" cy="230" rx="90" ry="45" fill="#FFE08A" opacity="0.18"/>
+  <!-- road -->
+  <rect x="0" y="360" width="600" height="20" fill="#33415C"/>
+</svg>

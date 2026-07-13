@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E4F0FF"/>
+      <stop offset="100%" stop-color="#FAFCFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#skyN)"/>
+  <rect x="0" y="380" width="600" height="40" fill="#D9E2EC"/>
+  <!-- meter box -->
+  <rect x="220" y="130" width="160" height="200" rx="10" fill="#F4F4F4" stroke="#8A97A8" stroke-width="3"/>
+  <rect x="240" y="150" width="120" height="70" rx="6" fill="#0B2454"/>
+  <text x="300" y="185" text-anchor="middle" font-family="Arial" font-weight="700" font-size="22" fill="#3CD070">04521.7</text>
+  <text x="300" y="205" text-anchor="middle" font-family="Arial" font-weight="500" font-size="10" fill="#FFC93C">kWh NET METER</text>
+  <circle cx="255" cy="240" r="7" fill="#3CD070"/>
+  <circle cx="280" cy="240" r="7" fill="#FFC93C"/>
+  <circle cx="305" cy="240" r="7" fill="#FF6B6B"/>
+  <rect x="240" y="260" width="120" height="10" rx="3" fill="#CFCFCF"/>
+  <rect x="240" y="280" width="120" height="10" rx="3" fill="#CFCFCF"/>
+  <rect x="270" y="305" width="60" height="14" rx="4" fill="#8A97A8"/>
+  <!-- cable to grid pole -->
+  <line x1="380" y1="230" x2="470" y2="230" stroke="#333" stroke-width="5"/>
+  <line x1="470" y1="80" x2="470" y2="380" stroke="#666" stroke-width="8"/>
+  <line x1="440" y1="110" x2="500" y2="110" stroke="#666" stroke-width="6"/>
+  <line x1="440" y1="150" x2="500" y2="150" stroke="#666" stroke-width="6"/>
+  <!-- cable to house/panel -->
+  <line x1="220" y1="230" x2="140" y2="230" stroke="#333" stroke-width="5"/>
+  <g transform="translate(60,190) rotate(-8)">
+    <rect x="0" y="0" width="110" height="42" rx="4" fill="#123B7A" stroke="#0B2454" stroke-width="2"/>
+    <line x1="27" y1="0" x2="27" y2="42" stroke="#3E6FC4" stroke-width="2"/>
+    <line x1="54" y1="0" x2="54" y2="42" stroke="#3E6FC4" stroke-width="2"/>
+    <line x1="81" y1="0" x2="81" y2="42" stroke="#3E6FC4" stroke-width="2"/>
+  </g>
+</svg>
