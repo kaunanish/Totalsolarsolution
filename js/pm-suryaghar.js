@@ -146,6 +146,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       window.open(waUrl, '_blank');
 
+      // Google Ads conversion tracking — this lead-form submission IS the
+      // conversion event (no separate "thank you" page on this site).
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18328387983/TBP4CITZ1NEcEI-D1KNE',
+          'value': 1.0,
+          'currency': 'INR'
+        });
+      }
+
       if (leadFormStatus) {
         leadFormStatus.textContent = 'Opening WhatsApp — just hit Send to request your free site visit!';
         leadFormStatus.classList.add('show');
